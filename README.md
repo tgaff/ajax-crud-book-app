@@ -4,11 +4,11 @@ In this lab you will CRUD resources using AJAX and a RESTful JSON API. Your goal
 
 ### Getting Started
 
-Fork this repo, and clone it into your `dev` folder on your local machine.
+1. Fork this repo, and clone it into your `dev` folder on your local machine.
 
-As you tackle the user stories below, make sure to commit frequently and push your changes to github.
+2. As you tackle the user stories below, make sure to commit frequently and push your changes to github.
 
-Please also make sure to style your page using css & bootstrap so that it looks like the screenshot below (or come up with your own design)!
+3. Finally, make sure to style your page using css & bootstrap so that it's nice to use (go off the screenshot below, or come up with your own design)!
 
 ### User Stories
 
