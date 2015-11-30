@@ -15,8 +15,8 @@ In this lab you will CRUD resources using AJAX and a RESTful JSON API. Your goal
 
 ## Recommended
 
-While you're developing a library, treat it as a real-world project. As you run into issues with our API add them to a list of problems you can research later. An example could be "I found it difficult to find documentation on what was returned from the API".
-                                                                                                                                               t
+While you're developing a library, treat it as a real-world project. As you run into issues with our API add them to a list of problems you can research later (e.g. "I found it difficult to find documentation on what was returned from the API").
+
 Prove to us you've read the document by including your list of 5 issues and any supporting references from the document in your submission pull request.
 
 ## Submission
