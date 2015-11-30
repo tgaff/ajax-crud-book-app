@@ -24,7 +24,7 @@ And most importantly, submitting a form should never cause the page to refresh!
 
 ### Recommended
 
-While you're developing a library, treat it as a real-world project. As you run into issues with our API add them to a list of problems you can research later (e.g. "I found it difficult to find documentation on what was returned from the API").
+There are a lot of gotchas you'll encounter as you CRUD your books! As you run into issues with our API add them to a list of problems you can research later (e.g. "I found it difficult to find documentation on what was returned from the API").
 
 Prove to us you've read the document by including your list of 5 issues and any supporting references from the document in your submission pull request.
 
