@@ -8,7 +8,7 @@ In this lab you will CRUD resources using AJAX and a RESTful JSON API. Your goal
 
 2. As you tackle the user stories below, make sure to commit frequently and push your changes to github.
 
-3. Finally, make sure to style your page using css & bootstrap so that it's nice to use (go off the screenshot below, or come up with your own design)!
+3. Finally, make sure to style your page using css & bootstrap so that it's nice to use! Feel free to come up with your own design, or go off the screenshot below.
 
 ### User Stories
 
