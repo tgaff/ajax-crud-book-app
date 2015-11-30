@@ -35,6 +35,6 @@ And don't forget to take a look at the solution branch! (Watch out! You might le
 * As you make code changes, frequently commit and push to GitHub.
 * Please submit this lab as a pull request.
 
-### Goal
+### Example Book App Screenshot
 
 ![screenshot-of-book-app](https://cloud.githubusercontent.com/assets/7833470/10989235/997e6de8-83f9-11e5-9267-5e65839a01ab.png)
