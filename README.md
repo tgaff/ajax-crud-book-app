@@ -1,6 +1,6 @@
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> AJAX CRUD Book App Lab
 
-**Objective:** In this lab you will CRUD resources using jQuery AJAX and a RESTful JSON API endpoint. Your goal is to `create`, `read`, `update`, and `delete` books, and render those books to the page using jQuery.
+In this lab you will CRUD resources using AJAX and a RESTful JSON API. Your goal is to `create`, `read`, `update`, and `delete` books, and to render those books to the page using jQuery and AJAX.
 
 ## Getting Started
 
