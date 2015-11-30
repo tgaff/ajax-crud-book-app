@@ -7,11 +7,8 @@ $(function() {
   // element to display list of books
   var $booksList = $('#books-list');
 
-  // helper function to render all books to view
-  var renderBooks = function(books) {
-    var books_html = books.reverse().map(buildBookHTMLString);
-    $booksList.prepend(books_html);
-  };
+  // form for creating new books
+  var $createBookForm = $("#create-book");
 
   // GET all books on page load
   $.ajax({
@@ -22,9 +19,42 @@ $(function() {
     }
   });
 
+  // listen for the submit event
+  $createBookForm.on('submit', function (event) {
+    event.preventDefault();
+
+    var newBook = $(this).serialize(); // this grabs all the form data
+
+    // POST request to create new book
+    $.ajax({
+      url: baseUrl,
+      method: "POST",
+      data: newBook,
+      success: function (data) {
+        console.log(data);
+        renderBooks([data]);
+      },
+      error: function() {
+        console.log("uh oh, failed to create book!")
+      }
+    });
+
+    // reset the form
+    $createBookForm[0].reset();
+    $createBookForm.find('input').first().focus();
+  });
+
 });
 
 
+// helper function to render books to view
+function renderBooks(books) {
+  var books_html = books.reverse().map(buildBookHTMLString);
+  $booksList.prepend(books_html);
+};
+
+
+// helper function to build a single book element
 function buildBookHTMLString(book){
   return (
             "<div class='book' data-id='" + book._id + "'>" +
