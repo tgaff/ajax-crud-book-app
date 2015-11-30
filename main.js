@@ -1,9 +1,8 @@
 // wait for DOM to load before running JS
-$(function() {
+$(document).ready(function() {
 
-  // check to make sure JS is loaded
-  console.log('JS is loaded!');
-  
+  console.log('JS is loaded!'); // sanity check
+
   // your code here
 
 });
