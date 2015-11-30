@@ -2,15 +2,13 @@
 
 In this lab you will CRUD resources using AJAX and a RESTful JSON API. Your goal is to `create`, `read`, `update`, and `delete` books, and to render those books to the page using jQuery and AJAX.
 
-![screenshot-of-book-app](https://cloud.githubusercontent.com/assets/7833470/10989235/997e6de8-83f9-11e5-9267-5e65839a01ab.png)
-
 ### Getting Started
 
 Fork this repo, and clone it into your `dev` folder on your local machine.
 
 As you tackle the user stories below, make sure to commit frequently and push your changes to github.
 
-Please also make sure to style your page using css & bootstrap so that it looks like the screenshot above (or come up with your own design)!
+Please also make sure to style your page using css & bootstrap so that it looks like the screenshot below (or come up with your own design)!
 
 ### User Stories
 
@@ -32,3 +30,7 @@ Prove to us you've read the document by including your list of 5 issues and any 
 
 * As you make code changes, frequently commit and push to GitHub.
 * Please submit this lab as a pull request.
+
+---
+
+![screenshot-of-book-app](https://cloud.githubusercontent.com/assets/7833470/10989235/997e6de8-83f9-11e5-9267-5e65839a01ab.png)
