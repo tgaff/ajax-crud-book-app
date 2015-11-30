@@ -1,1 +1,5 @@
 /* put custom styles in this file */
+
+body {
+  background-color: lightblue; /* sanity check */
+}
