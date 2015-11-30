@@ -15,10 +15,12 @@ In this lab you will CRUD resources using AJAX and a RESTful JSON API. Your goal
 **A user should be able to...**
 
 * See a list of all books (aka the `index` page)
-* `create` a new book
+* Fill out and submit a form to `create` a new book
 * `read` a book :)
-* `update` an existing book
-* `delete` an existing book
+* Modify and submit a form to `update` an existing book
+* Click a button to `delete` an existing book
+
+And most importantly, submitting a form should never cause the page to refresh!
 
 ### Recommended
 
