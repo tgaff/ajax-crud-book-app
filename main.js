@@ -75,15 +75,39 @@ $(function() {
     });
   });
 
+  // listen for submission of update-book forms
+  $booksList.on('submit', '.update-book', function (event) {
+    event.preventDefault();
 
-});
+    // find the corresponding book element
+    var $book = $(this).closest('.book');
 
+    // find the book's id (stored in HTML as `data-id`)
+    var bookId = $book.attr('data-id');
+
+    var updatedBook = $(this).serialize(); // this grabs all the form data
+
+    // PUT request to update book
+    $.ajax({
+      url: baseUrl + '/' + bookId,
+      method: 'PUT',
+      data: updatedBook,
+      success: function(data) {
+        $book.remove();
+        renderBooks([data]);
+      },
+      error: function(){
+        alert("failed to update book");
+      }
+    });
+  })
 
 });
 
 
 // helper function to build a single book element
 function buildBookHTMLString(book){
+  // MY EYES ARE BLEEDING
   return (
             "<div class='book' data-id='" + book._id + "'>" +
               "<div class='row'>" +
@@ -98,9 +122,34 @@ function buildBookHTMLString(book){
                   "<p><strong>Released:</strong> " + book.releaseDate + "</p>" +
                 "</div>" +
 
+                "<a href='javascript:void(0)' class='btn btn-default btn-sm edit-book' data-toggle='collapse' data-target='#update-" + book._id + "'>" +
+                  "<span class='glyphicon glyphicon-pencil'></span> Edit" +
+                "</a>" +
+
                 "<a href='javascript:void(0)' class='btn btn-default btn-sm delete-book'>" +
                   "<span class='glyphicon glyphicon-trash'></span> Delete" +
                 "</a>" +
+
+                "<div class='collapse' id='update-" + book._id + "'>" +
+                  "<br>" +
+                  "<form class='update-book'>" +
+                    "<div class='form-group'>" +
+                      "<input type='text' name='title' class='form-control' placeholder='Title' value='" + book.title + "'>" +
+                    "</div>" +
+                    "<div class='form-group'>" +
+                      "<input type='text' name='author' class='form-control' placeholder='Author' value='" + book.author + "'>" +
+                    "</div>" +
+                    "<div class='form-group'>" +
+                      "<input type='text' name='image' class='form-control' placeholder='Image' value='" + book.image + "'>" +
+                    "</div>" +
+                    "<div class='form-group'>" +
+                      "<input type='text' name='releaseDate' class='form-control' placeholder='Release Date' value='" + book.releaseDate + "'>" +
+                    "</div>" +
+                    "<div class='form-group'>" +
+                      "<input type='submit' class='btn btn-block btn-default' value='Update'>" +
+                    "</div>" +
+                  "</form>" +
+                "</div>" +
 
               "</div>" +
               "<hr>" +
