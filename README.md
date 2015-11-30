@@ -26,11 +26,13 @@ While you're developing a library, treat it as a real-world project. As you run 
 
 Prove to us you've read the document by including your list of 5 issues and any supporting references from the document in your submission pull request.
 
+And don't forget to take a look at the solution branch! (Watch out! You might learn a thing or too.)
+
 ### Submission
 
 * As you make code changes, frequently commit and push to GitHub.
 * Please submit this lab as a pull request.
 
----
+### Goal
 
 ![screenshot-of-book-app](https://cloud.githubusercontent.com/assets/7833470/10989235/997e6de8-83f9-11e5-9267-5e65839a01ab.png)
