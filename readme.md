@@ -1,9 +1,9 @@
 # pre-requisites for using angular with this lab
 
-ng-click
-ng-show/hide
-ng-controller
-$http
+* ng-click
+* ng-show/hide
+* ng-controller
+* $http
 
 
 
