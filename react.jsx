@@ -43,58 +43,51 @@ var Book = React.createClass({
     //console.log('my state', this.state);
   },
 
-
   render: function() {
     return (
-       // repeat for each book
-       <div class="book" data-id={this.props.book._id} >
-          <div class="row">
-
-            <div class="col-xs-4">
-              <img src={this.props.book.image} className="img-responsive"/>
-            </div>
-
-            <div class="col-xs-8">
-              <p><strong>Title:</strong> {this.props.book.title}</p>
-              <p><strong>Author:</strong> {this.props.book.author}</p>
-              <p><strong>Released:</strong> {this.props.book.releaseDate}</p>
-
-              <a class="btn btn-default btn-sm edit-book" >
-                <span class="glyphicon glyphicon-pencil"></span> Edit
-              </a>
-
-              <a class="btn btn-default btn-sm delete-book" >
-                <span class="glyphicon glyphicon-trash"></span> Delete
-              </a>
-
-              <div >
-                <br />
-                <form class="update-book" >
-                  <div class="form-group">
-                    <input type="text" name="title" class="form-control" placeholder="Title" val="this.props.book.title" />
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="author" class="form-control" placeholder="Author" val="this.props.book.author" />
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="image" class="form-control" placeholder="Image" val="this.props.book.image" />
-                  </div>
-                  <div class="form-group">
-                    <input type="text" name="releaseDate" class="form-control" placeholder="Release Date" val="{this.props.book.releaseDate}" />
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" class="btn btn-block btn-default" value="Update" />
-                  </div>
-                </form>
-              </div>
+      // repeat for each book
+      <div className="book" data-id="{this.props.book._id}">
+        <div className="row">
+          <div className="col-xs-4">
+            <img src={this.props.book.image} className="img-responsive" />
+          </div>
+          <div className="col-xs-8">
+            <p><strong>Title:</strong> {this.props.book.title}</p>
+            <p><strong>Author:</strong> {this.props.book.author}</p>
+            <p><strong>Released:</strong> {this.props.book.releaseDate}</p>
+            <a className="btn btn-default btn-sm edit-book">
+              <span className="glyphicon glyphicon-pencil" /> Edit
+            </a>
+            <a className="btn btn-default btn-sm delete-book">
+              <span className="glyphicon glyphicon-trash" /> Delete
+            </a>
+            <div>
+              <br />
+              <form className="update-book">
+                <div className="form-group">
+                  <input type="text" name="title" className="form-control" placeholder="Title" value={this.props.book.title} />
+                </div>
+                <div className="form-group">
+                  <input type="text" name="author" className="form-control" placeholder="Author" value={this.props.book.author} />
+                </div>
+                <div className="form-group">
+                  <input type="text" name="image" className="form-control" placeholder="Image" value={this.props.book.image} />
+                </div>
+                <div className="form-group">
+                  <input type="text" name="releaseDate" className="form-control" placeholder="Release Date" value={this.props.book.releaseDate} />
+                </div>
+                <div className="form-group">
+                  <input type="submit" className="btn btn-block btn-default" defaultValue="Update" />
+                </div>
+              </form>
             </div>
           </div>
-          <hr />
         </div>
+        <hr />
+      </div>
       //  END repeat for each book
     );
   }
-
 });
 
 
