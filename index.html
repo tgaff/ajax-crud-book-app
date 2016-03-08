@@ -55,7 +55,7 @@
                     <p><strong>Released:</strong> {{book.releaseDate}}</p>
 
                     <!-- edit button to toggle form -->
-                    <a href="javascript:void(0)" class="btn btn-default btn-sm edit-book" data-toggle="collapse" data-target="#update-{{book._id}}">
+                    <a class="btn btn-default btn-sm edit-book" ng-click="book.editFormVisible = !book.editFormVisible">
                       <span class="glyphicon glyphicon-pencil"></span> Edit
                     </a>
 
@@ -65,20 +65,20 @@
                     </a>
 
                     <!-- form to update book -->
-                    <div class="collapse" id="update-{{book._id}}">
+                    <div ng-show="book.editFormVisible" >
                       <br>
-                      <form class="update-book">
+                      <form class="update-book" ng-submit="bc.update(book)">
                         <div class="form-group">
-                          <input type="text" name="title" class="form-control" placeholder="Title" value="{{book.title}}">
+                          <input type="text" name="title" class="form-control" placeholder="Title" ng-model="book.title">
                         </div>
                         <div class="form-group">
-                          <input type="text" name="author" class="form-control" placeholder="Author" value="{{book.author}}">
+                          <input type="text" name="author" class="form-control" placeholder="Author" ng-model="book.author">
                         </div>
                         <div class="form-group">
-                          <input type="text" name="image" class="form-control" placeholder="Image" value="{{book.image}}">
+                          <input type="text" name="image" class="form-control" placeholder="Image" ng-model="book.image">
                         </div>
                         <div class="form-group">
-                          <input type="text" name="releaseDate" class="form-control" placeholder="Release Date" value="{{book.releaseDate}}">
+                          <input type="text" name="releaseDate" class="form-control" placeholder="Release Date" ng-model="book.releaseDate">
                         </div>
                         <div class="form-group">
                           <input type="submit" class="btn btn-block btn-default" value="Update">

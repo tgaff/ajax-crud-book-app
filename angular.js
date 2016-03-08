@@ -9,6 +9,7 @@ function BooksController(    $http   ) {
   vm.getBooks = getIndex;
   vm.newBook = {};
   vm.createBook = create;
+  vm.update = update;
   console.log('hi');
 
   // fetch data at start
@@ -30,6 +31,13 @@ function BooksController(    $http   ) {
         vm.books.push(data);
         vm.newBook = {};
       });
+  }
+
+  function update(book) {
+    console.log('updating book: ', book);
+    var put = $http.put(baseUrl + '/' + book._id, book);
+    book.editFormVisible = false;
+    return put;
   }
 }
 
