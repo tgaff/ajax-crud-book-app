@@ -1,3 +1,14 @@
+# pre-requisites for using react with this lab
+
+## react.createClass
+* render
+* state vs. props (a little)
+* defaultValue (placeholder + value binding)
+* ref (forms binding)
+* scope between instances
+* className instead of className
+
+
 # pre-requisites for using angular with this lab
 
 * ng-click
