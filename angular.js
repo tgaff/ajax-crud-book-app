@@ -10,10 +10,12 @@ function BooksController(    $http   ) {
   vm.newBook = {};
   vm.createBook = create;
   vm.update = update;
-  console.log('hi');
+  vm.destroy = destroy;
 
   // fetch data at start
   getIndex();
+
+
 
   function getIndex() {
     return $http.get(baseUrl)
@@ -39,6 +41,17 @@ function BooksController(    $http   ) {
     book.editFormVisible = false;
     return put;
   }
+
+  function destroy(book) {
+    console.log('deleting book: ', book);
+    var promise = $http.delete(baseUrl + '/' + book._id);
+    promise.success(function(data) {
+      var index = vm.books.indexOf(book);
+      vm.books.splice(index, 1);
+    });
+    return promise;
+  }
+
 }
 
 
