@@ -7,8 +7,11 @@ function BooksController(    $http   ) {
   var baseUrl = 'https://super-crud.herokuapp.com/books';
   vm.books = [];
   vm.getBooks = getIndex;
+  vm.newBook = {};
+  vm.createBook = create;
   console.log('hi');
 
+  // fetch data at start
   getIndex();
 
   function getIndex() {
@@ -20,6 +23,14 @@ function BooksController(    $http   ) {
       .error(function(error) { console.log(error) });
   }
 
+  function create() {
+    if (vm.newBook.title.length < 2) { return; }
+    return $http.post(baseUrl, vm.newBook)
+      .success(function(data) {
+        vm.books.push(data);
+        vm.newBook = {};
+      });
+  }
 }
 
 
